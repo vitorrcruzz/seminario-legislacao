@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090e1e">
+  <meta name="description" content="Game Legal: um jogo educativo de 8 fases sobre jogos eletrônicos e a Lei nº 14.852/2024, baseado no Capítulo 11 do Manual de Direito Digital.">
+  <title>GAME LEGAL — Missão Marco Legal dos Games</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">⚖️</span><span>GAME LEGAL <span class="brand-year">/ 2026</span></span></div>
+      <div class="topright"><span class="chip">Capítulo 11 · Direito Digital</span><span>Seminário interativo</span></div>
+    </header>
+
+    <section id="intro" class="view hero" aria-labelledby="title">
+      <div class="hero-info">
+        <span class="eyebrow">◈ Sua missão começa agora</span>
+        <h1 id="title">GAME <span>LEGAL.</span></h1>
+        <p class="lead">Você faz parte de um estúdio de jogos. São <b>8 decisões</b> para lançar um game respeitando a cultura, os criadores e os direitos dos jogadores. Consegue chegar ao final?</p>
+        <div class="stats"><span class="stat">🎯 <strong>8 fases</strong></span><span class="stat">⏱️ <strong>3 a 5 minutos</strong></span><span class="stat">📱 <strong>Celular e PC</strong></span><span class="stat">🔌 <strong>Funciona offline</strong></span></div>
+        <div class="actions"><button id="startBtn" class="primary" type="button">▶ INICIAR MISSÃO</button><button class="secondary" id="howBtn" type="button">Como jogar?</button></div>
+        
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-glow"></div>
+        <div class="art-screen"><div class="dots"><i></i><i></i><i></i></div><div class="art-display"><div class="gamepad">🎮</div><div class="pixel">PRESS START</div></div><div class="art-bottom"><div class="cross">✚</div><div class="pills"><i></i><i></i></div></div></div>
+        <div class="mission-callout"><b>BASE DO DESAFIO</b> · Síntese do Capítulo 11 — <i>Jogos Eletrônicos e a Lei nº 14.852/2024</i>, produzida na disciplina.</div>
+      </div>
+    </section>
+
+    <section id="game" class="view hide" aria-labelledby="phaseTitle">
+      <div class="game-shell">
+        <div class="game-top"><div class="meta"><span class="eyebrow" id="phaseNumber">FASE 01 / 08</span><span>⭐ PONTOS: <strong id="score">000</strong></span></div></div>
+        <div class="progressline" role="progressbar" aria-label="Progresso do jogo" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" id="progressBar"><div id="progressFill"></div></div>
+        <div class="dots-progress" id="dotsProgress" aria-hidden="true"></div>
+        <div class="question-layout">
+          <div class="scene"><div class="scene-icon" id="sceneIcon" aria-hidden="true">🎨</div><div class="scene-label" id="sceneLabel">Cultura</div></div>
+          <div>
+            <div class="content-tag" id="sectionName">Cultura e arte</div>
+            <h2 id="phaseTitle">Título da fase</h2>
+            <p class="scene-text" id="scenario"></p>
+            <p class="question" id="question"></p>
+            <div class="choices" id="choices" role="group" aria-label="Alternativas"></div>
+            <div class="feedback hide" id="feedback" role="status" aria-live="polite">
+              <div class="feedback-head" id="feedbackHead"></div>
+              <p id="feedbackExplanation"></p><div class="source" id="feedbackSource"></div>
+              <div class="feedback-actions"><span class="feedback-tip">💡 Cada resposta explica uma regra.</span><button class="primary" type="button" id="nextBtn">PRÓXIMA FASE →</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="stage-foot"><span>⌨️ Dica: teclas 1, 2 e 3 escolhem uma resposta.</span><button type="button" class="quiet" id="restartInline">Recomeçar</button></div>
+      </div>
+    </section>
+
+    <section id="end" class="view hide" aria-labelledby="resultTitle">
+      <div class="results">
+        <div class="trophy" aria-hidden="true">🏆</div>
+        <span class="eyebrow">Missão concluída</span>
+        <h2 id="resultTitle">Lançamento autorizado!</h2>
+        <p class="result-lead">Você terminou as oito fases e descobriu por que os games envolvem mais que diversão. O Direito também está dentro do jogo!</p>
+        <div class="scorebig"><span id="finalScore">000</span><small> / 800 pontos</small></div>
+        <div class="lessons">
+          <div class="lesson"><b>🎨</b><strong>Jogos também são cultura</strong></div>
+          <div class="lesson"><b>⚖️</b><strong>Há regras para o setor</strong></div>
+          <div class="lesson"><b>🛡️</b><strong>Jogadores têm direitos</strong></div>
+        </div>
+        <p class="review" id="resultSummary"></p>
+        <div class="actions"><button class="primary" id="retryBtn" type="button">↻ JOGAR DE NOVO</button><button class="secondary" id="printBtn" type="button">🖨️ Imprimir resultado</button></div>
+      </div>
+    </section>
+
+    <footer class="sources">
+      <h3>Fontes do seminário</h3>
+      <p><b>Base principal:</b> MATHEWS MIZAEL; VINICIO DOMINATO; VITOR CRUZ. <i>Síntese do Capítulo 11 — Jogos Eletrônicos e a Lei nº 14.852/2024</i>, trabalho de aula baseado em MAGRO, Américo Ribeiro; ANDRADE, Landolfo. <i>Manual de Direito Digital</i>. 5. ed. São Paulo: JusPODIVM, 2025.</p>
+      <p><a href="https://legis.senado.leg.br/norma/38444921/publicacao/38448346" target="_blank" rel="noopener noreferrer">Lei nº 14.852/2024 — Senado Federal</a> · <a href="https://www2.camara.leg.br/legin/fed/lei/2018/lei-13709-14-agosto-2018-787077-normaatualizada-pl.html" target="_blank" rel="noopener noreferrer">Lei Geral de Proteção de Dados (LGPD) — Câmara dos Deputados</a></p>
+      <div class="signature"><span>Game educativo · Conteúdo acadêmico, não aconselhamento jurídico</span><span>Desenvolvido para o seminário de Vitor Cruz & Vinicio Dominato</span></div>
+    </footer>
+  </main>
+
+  <dialog id="helpDialog" class="help-dialog">
+    <h2 class="help-title">Como jogar</h2>
+    <p><b>1.</b> Clique em <b>Iniciar missão</b> para começar.</p>
+    <p><b>2.</b> Leia a situação e escolha uma das três alternativas.</p>
+    <p><b>3.</b> Confira a explicação e avance para a próxima fase.</p>
+    <p><b>4.</b> Ao terminar as oito fases, veja sua pontuação e tente novamente se quiser.</p>
+    <form class="help-close" method="dialog"><button class="primary" type="submit">ENTENDI</button></form>
+  </dialog>
+</body>
+</html>
